@@ -394,16 +394,24 @@ function GetExistingTags($apiUrl) {
 }
 
 # Retrieve release tag for artiface package. If multiple packages, then output the first one.
-function RetrieveReleaseTag($pkgRepository, $artifactLocation, $pkgName, $continueOnError = $true) {
+function RetrieveReleaseTag($pkgRepository, $artifactLocation, $continueOnError = $true) {
   if (!$artifactLocation) {
     return ""
   }
   try {
-    $pkgs, $parsePkgInfoFn = RetrievePackages -pkgRepository $pkgRepository -artifactLocation $artifactLocation -pkgName $pkgName
+    $pkgs, $parsePkgInfoFn = RetrievePackages -pkgRepository $pkgRepository -artifactLocation $artifactLocation
     if (!$pkgs -or !$pkgs[0]) {
+      Write-Host "No packages retrieved from artifact location."
       return ""
     }
-    $parsedPackage = &$parsePkgInfoFn -pkg $pkgs[0]
+    if ($pkgs.Count -gt 1) {
+      Write-Host "There are more than 1 packages retieved from artifact location."
+      foreach ($pkg in $pkgs) {
+        Write-Host "The package name is $($pkg.BaseName)"
+      }
+      return ""
+    }
+    $parsedPackage = &$parsePkgInfoFn -pkg $pkgs[0] -workDirectory $artifactLocation
     return $parsedPackage.ReleaseTag
   }
   catch {
@@ -413,7 +421,7 @@ function RetrieveReleaseTag($pkgRepository, $artifactLocation, $pkgName, $contin
     Write-Error "No release tag retrieved from $artifactLocation"
   }
 }
-function RetrievePackages($pkgRepository, $artifactLocation, $pkgName) {
+function RetrievePackages($pkgRepository, $artifactLocation) {
   $parsePkgInfoFn = ""
   $packagePattern = ""
   $pkgRepository = $pkgRepository.Trim()
@@ -451,12 +459,7 @@ function RetrievePackages($pkgRepository, $artifactLocation, $pkgName) {
       exit(1)
     }
   }
-  $file_regex = if (!$pkgName) {
-    $packagePattern
-  } else {
-    "$($pkgName)$($packagePattern)"
-  }
-  $pkgs = Get-ChildItem -Path $artifactLocation -Include $file_regex -Recurse -File
+  $pkgs = Get-ChildItem -Path $artifactLocation -Include $packagePattern -Recurse -File
   return $pkgs, $parsePkgInfoFn
 }
 
