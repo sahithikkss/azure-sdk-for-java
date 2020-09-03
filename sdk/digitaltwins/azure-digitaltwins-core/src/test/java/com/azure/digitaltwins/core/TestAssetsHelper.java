@@ -177,18 +177,14 @@ public class TestAssetsHelper {
     {
         String id;
         Random random = new Random();
-        for (int i = 0; i < MAX_TRIES; ++i)
-        {
-            id = baseName + random.nextInt();
+        for (int i = 0; i < MAX_TRIES; ++i) {
+            id = baseName + Math.abs(random.nextInt());
             id = id.length() > MAX_ID_LENGTH ? id.substring(0, MAX_ID_LENGTH) : id;
-            try
-            {
+            try {
                 getMethod.accept(id);
             }
-            catch (ErrorResponseException e)
-            {
-                if (e.getResponse().getStatusCode() == HttpURLConnection.HTTP_NOT_FOUND)
-                {
+            catch (ErrorResponseException e) {
+                if (e.getResponse().getStatusCode() == HttpURLConnection.HTTP_NOT_FOUND) {
                     return id;
                 }
             }
