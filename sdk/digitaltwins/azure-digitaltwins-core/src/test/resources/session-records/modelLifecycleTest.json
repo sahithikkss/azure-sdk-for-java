@@ -1,0 +1,370 @@
+{
+  "networkCallRecords" : [ {
+    "Method" : "GET",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Building;14350?includeModelDefinition=true&api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "2f45a8d5-4ec0-43f5-b672-91817ef276d7"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "212",
+      "StatusCode" : "404",
+      "Body" : "{\"error\":{\"code\":\"ModelNotFound\",\"message\":\"There is no Model(s) available that matches the provided id(s) dtmi:example:Building;14350. Check that the Model ID provided is valid by doing a Model_List API call.\"}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:51 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "GET",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Floor;1-125835?includeModelDefinition=true&api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "31dc78ba-e010-4628-a59e-ef26858d5773"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "203",
+      "StatusCode" : "400",
+      "Body" : "{\"error\":{\"code\":\"InvalidArgument\",\"message\":\"The format of the Model ID dtmi:example:Floor;1-125835 provided is not supported. See model documentation(http://aka.ms/ADTv2Models) for supported format.\"}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:51 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "GET",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Floor;1-148358?includeModelDefinition=true&api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "b7046978-c8e4-4997-8980-965f3dba9f80"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "203",
+      "StatusCode" : "400",
+      "Body" : "{\"error\":{\"code\":\"InvalidArgument\",\"message\":\"The format of the Model ID dtmi:example:Floor;1-148358 provided is not supported. See model documentation(http://aka.ms/ADTv2Models) for supported format.\"}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:51 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "GET",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Floor;11846306?includeModelDefinition=true&api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "13112cb9-c095-438d-998b-ad2340198331"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "212",
+      "StatusCode" : "404",
+      "Body" : "{\"error\":{\"code\":\"ModelNotFound\",\"message\":\"There is no Model(s) available that matches the provided id(s) dtmi:example:Floor;11846306. Check that the Model ID provided is valid by doing a Model_List API call.\"}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:51 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "GET",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Hvac;1-9959937?includeModelDefinition=true&api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "bd4e557b-35b9-4bea-b93c-93e88ae89516"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "203",
+      "StatusCode" : "400",
+      "Body" : "{\"error\":{\"code\":\"InvalidArgument\",\"message\":\"The format of the Model ID dtmi:example:Hvac;1-9959937 provided is not supported. See model documentation(http://aka.ms/ADTv2Models) for supported format.\"}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:51 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "GET",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Hvac;118273874?includeModelDefinition=true&api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "b9b98a1c-47a5-463e-a934-c22e7fa51ce5"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "212",
+      "StatusCode" : "404",
+      "Body" : "{\"error\":{\"code\":\"ModelNotFound\",\"message\":\"There is no Model(s) available that matches the provided id(s) dtmi:example:Hvac;118273874. Check that the Model ID provided is valid by doing a Model_List API call.\"}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:51 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "GET",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Ward;1-9874640?includeModelDefinition=true&api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "4c614ad8-f6e7-429e-af05-21d605641f18"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "203",
+      "StatusCode" : "400",
+      "Body" : "{\"error\":{\"code\":\"InvalidArgument\",\"message\":\"The format of the Model ID dtmi:example:Ward;1-9874640 provided is not supported. See model documentation(http://aka.ms/ADTv2Models) for supported format.\"}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:51 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "GET",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Ward;1-1544415?includeModelDefinition=true&api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "e7f551fc-b2f5-4302-9a02-727601099f94"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "203",
+      "StatusCode" : "400",
+      "Body" : "{\"error\":{\"code\":\"InvalidArgument\",\"message\":\"The format of the Model ID dtmi:example:Ward;1-1544415 provided is not supported. See model documentation(http://aka.ms/ADTv2Models) for supported format.\"}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:51 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "GET",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Ward;196412150?includeModelDefinition=true&api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "c1ad6fea-5452-4a3e-9ea5-1dd6d8f335a4"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "212",
+      "StatusCode" : "404",
+      "Body" : "{\"error\":{\"code\":\"ModelNotFound\",\"message\":\"There is no Model(s) available that matches the provided id(s) dtmi:example:Ward;196412150. Check that the Model ID provided is valid by doing a Model_List API call.\"}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:51 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "POST",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models?api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "6324af69-bb73-438c-a42b-2f74d1e3b688",
+      "Content-Type" : "application/json"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "609",
+      "StatusCode" : "201",
+      "Body" : "[{\"id\":\"dtmi:example:Building;14350\",\"description\":{\"en\":\"Afree-standingstructure.\"},\"displayName\":{\"en\":\"Building\"},\"decommissioned\":false,\"uploadTime\":\"2020-09-03T22:50:52.9026098+00:00\"},{\"id\":\"dtmi:example:Hvac;118273874\",\"description\":{\"en\":\"Aheating,ventilation,andairconditioningunit.\"},\"displayName\":{\"en\":\"HVAC\"},\"decommissioned\":false,\"uploadTime\":\"2020-09-03T22:50:52.9027463+00:00\"},{\"id\":\"dtmi:example:Ward;196412150\",\"description\":{\"en\":\"Aseparatepartitioninabuilding,madeofroomsandhallways.\"},\"displayName\":{\"en\":\"Ward\"},\"decommissioned\":false,\"uploadTime\":\"2020-09-03T22:50:52.9028406+00:00\"}]",
+      "Date" : "Thu, 03 Sep 2020 22:50:52 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "GET",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Building;14350?includeModelDefinition=true&api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "608bea9b-123d-49af-8463-620f2aab507b"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "600",
+      "StatusCode" : "200",
+      "Body" : "{\"id\":\"dtmi:example:Building;14350\",\"description\":{\"en\":\"Afree-standingstructure.\"},\"displayName\":{\"en\":\"Building\"},\"decommissioned\":false,\"uploadTime\":\"2020-09-03T22:50:52.9026098+00:00\",\"model\":{\"@id\":\"dtmi:example:Building;14350\",\"@type\":\"Interface\",\"displayName\":\"Building\",\"description\":\"Afree-standingstructure.\",\"contents\":[{\"@type\":\"Relationship\",\"name\":\"has\",\"target\":\"dtmi:example:Floor;11846306\"},{\"@type\":\"Relationship\",\"name\":\"isEquippedWith\",\"target\":\"dtmi:example:Hvac;118273874\"},{\"@type\":\"Property\",\"name\":\"AverageTemperature\",\"schema\":\"double\"}],\"@context\":[\"dtmi:dtdl:context;2\"]}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:52 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "PATCH",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Building;14350?api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "5e7d10b6-2d23-4344-a467-61eb715fcb0a",
+      "Content-Type" : "application/json-patch+json"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "0",
+      "StatusCode" : "204",
+      "Date" : "Thu, 03 Sep 2020 22:50:52 GMT"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "GET",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Building;14350?includeModelDefinition=true&api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "3b7591f7-7490-4129-9933-651f22f6bbd4"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "599",
+      "StatusCode" : "200",
+      "Body" : "{\"id\":\"dtmi:example:Building;14350\",\"description\":{\"en\":\"Afree-standingstructure.\"},\"displayName\":{\"en\":\"Building\"},\"decommissioned\":true,\"uploadTime\":\"2020-09-03T22:50:52.9026098+00:00\",\"model\":{\"@id\":\"dtmi:example:Building;14350\",\"@type\":\"Interface\",\"displayName\":\"Building\",\"description\":\"Afree-standingstructure.\",\"contents\":[{\"@type\":\"Relationship\",\"name\":\"has\",\"target\":\"dtmi:example:Floor;11846306\"},{\"@type\":\"Relationship\",\"name\":\"isEquippedWith\",\"target\":\"dtmi:example:Hvac;118273874\"},{\"@type\":\"Property\",\"name\":\"AverageTemperature\",\"schema\":\"double\"}],\"@context\":[\"dtmi:dtdl:context;2\"]}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:52 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "DELETE",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Building;14350?api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "02661ecd-39e8-4f69-8739-b9813567ad19"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "0",
+      "StatusCode" : "204",
+      "Date" : "Thu, 03 Sep 2020 22:50:52 GMT"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "GET",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Hvac;118273874?includeModelDefinition=true&api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "6be15048-7195-45e6-b409-e54833173fc8"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "667",
+      "StatusCode" : "200",
+      "Body" : "{\"id\":\"dtmi:example:Hvac;118273874\",\"description\":{\"en\":\"Aheating,ventilation,andairconditioningunit.\"},\"displayName\":{\"en\":\"HVAC\"},\"decommissioned\":false,\"uploadTime\":\"2020-09-03T22:50:52.9027463+00:00\",\"model\":{\"@id\":\"dtmi:example:Hvac;118273874\",\"@type\":\"Interface\",\"displayName\":\"HVAC\",\"description\":\"Aheating,ventilation,andairconditioningunit.\",\"contents\":[{\"@type\":\"Property\",\"name\":\"Efficiency\",\"schema\":\"double\"},{\"@type\":\"Property\",\"name\":\"TargetTemperature\",\"schema\":\"double\"},{\"@type\":\"Property\",\"name\":\"TargetHumidity\",\"schema\":\"double\"},{\"@type\":\"Relationship\",\"name\":\"cools\",\"target\":\"dtmi:example:Floor;11846306\"}],\"@context\":[\"dtmi:dtdl:context;2\"]}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:52 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "PATCH",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Hvac;118273874?api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "2d13727f-2037-4e71-96a2-7beab4a95dfc",
+      "Content-Type" : "application/json-patch+json"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "0",
+      "StatusCode" : "204",
+      "Date" : "Thu, 03 Sep 2020 22:50:52 GMT"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "GET",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Hvac;118273874?includeModelDefinition=true&api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "3ffc2960-f74d-48f3-b7c4-c289d72c67f0"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "666",
+      "StatusCode" : "200",
+      "Body" : "{\"id\":\"dtmi:example:Hvac;118273874\",\"description\":{\"en\":\"Aheating,ventilation,andairconditioningunit.\"},\"displayName\":{\"en\":\"HVAC\"},\"decommissioned\":true,\"uploadTime\":\"2020-09-03T22:50:52.9027463+00:00\",\"model\":{\"@id\":\"dtmi:example:Hvac;118273874\",\"@type\":\"Interface\",\"displayName\":\"HVAC\",\"description\":\"Aheating,ventilation,andairconditioningunit.\",\"contents\":[{\"@type\":\"Property\",\"name\":\"Efficiency\",\"schema\":\"double\"},{\"@type\":\"Property\",\"name\":\"TargetTemperature\",\"schema\":\"double\"},{\"@type\":\"Property\",\"name\":\"TargetHumidity\",\"schema\":\"double\"},{\"@type\":\"Relationship\",\"name\":\"cools\",\"target\":\"dtmi:example:Floor;11846306\"}],\"@context\":[\"dtmi:dtdl:context;2\"]}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:52 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "DELETE",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Hvac;118273874?api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "64bb28e1-c38e-4e21-9ea1-e0752d27eb45"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "0",
+      "StatusCode" : "204",
+      "Date" : "Thu, 03 Sep 2020 22:50:52 GMT"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "GET",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Ward;196412150?includeModelDefinition=true&api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "dfda6805-e3cc-4875-8206-2c9043d45ae6"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "593",
+      "StatusCode" : "200",
+      "Body" : "{\"id\":\"dtmi:example:Ward;196412150\",\"description\":{\"en\":\"Aseparatepartitioninabuilding,madeofroomsandhallways.\"},\"displayName\":{\"en\":\"Ward\"},\"decommissioned\":false,\"uploadTime\":\"2020-09-03T22:50:52.9028406+00:00\",\"model\":{\"@id\":\"dtmi:example:Ward;196412150\",\"@type\":\"Interface\",\"displayName\":\"Ward\",\"description\":\"Aseparatepartitioninabuilding,madeofroomsandhallways.\",\"contents\":[{\"@type\":\"Property\",\"name\":\"VisitorCount\",\"schema\":\"double\"},{\"@type\":\"Property\",\"name\":\"HandWashPercentage\",\"schema\":\"double\"},{\"@type\":\"Relationship\",\"name\":\"managedRooms\"}],\"@context\":[\"dtmi:dtdl:context;2\"]}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:52 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "PATCH",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Ward;196412150?api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "47c2563a-18bf-4ef0-b5bd-442ce843f5b1",
+      "Content-Type" : "application/json-patch+json"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "0",
+      "StatusCode" : "204",
+      "Date" : "Thu, 03 Sep 2020 22:50:52 GMT"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "GET",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Ward;196412150?includeModelDefinition=true&api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "89950eaf-36e2-4506-9db8-1fda112f2285"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "592",
+      "StatusCode" : "200",
+      "Body" : "{\"id\":\"dtmi:example:Ward;196412150\",\"description\":{\"en\":\"Aseparatepartitioninabuilding,madeofroomsandhallways.\"},\"displayName\":{\"en\":\"Ward\"},\"decommissioned\":true,\"uploadTime\":\"2020-09-03T22:50:52.9028406+00:00\",\"model\":{\"@id\":\"dtmi:example:Ward;196412150\",\"@type\":\"Interface\",\"displayName\":\"Ward\",\"description\":\"Aseparatepartitioninabuilding,madeofroomsandhallways.\",\"contents\":[{\"@type\":\"Property\",\"name\":\"VisitorCount\",\"schema\":\"double\"},{\"@type\":\"Property\",\"name\":\"HandWashPercentage\",\"schema\":\"double\"},{\"@type\":\"Relationship\",\"name\":\"managedRooms\"}],\"@context\":[\"dtmi:dtdl:context;2\"]}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:52 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "DELETE",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Ward;196412150?api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "b9faf5e5-64be-41c5-986f-61ca0f75181e"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "0",
+      "StatusCode" : "204",
+      "Date" : "Thu, 03 Sep 2020 22:50:52 GMT"
+    },
+    "Exception" : null
+  } ],
+  "variables" : [ ]
+}

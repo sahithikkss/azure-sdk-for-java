@@ -1,0 +1,91 @@
+{
+  "networkCallRecords" : [ {
+    "Method" : "GET",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Ward;1-1276230?includeModelDefinition=true&api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "a074491d-8e26-4ac5-a260-4c9e71a3eae5"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "203",
+      "StatusCode" : "400",
+      "Body" : "{\"error\":{\"code\":\"InvalidArgument\",\"message\":\"The format of the Model ID dtmi:example:Ward;1-1276230 provided is not supported. See model documentation(http://aka.ms/ADTv2Models) for supported format.\"}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:52 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "GET",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Ward;1-1327091?includeModelDefinition=true&api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "97b26d28-59dd-431f-af6b-36444570e44e"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "203",
+      "StatusCode" : "400",
+      "Body" : "{\"error\":{\"code\":\"InvalidArgument\",\"message\":\"The format of the Model ID dtmi:example:Ward;1-1327091 provided is not supported. See model documentation(http://aka.ms/ADTv2Models) for supported format.\"}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:53 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "GET",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/dtmi:example:Ward;114191638?includeModelDefinition=true&api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "01c97f38-c27f-40f0-b667-bfc835de0a2b"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "212",
+      "StatusCode" : "404",
+      "Body" : "{\"error\":{\"code\":\"ModelNotFound\",\"message\":\"There is no Model(s) available that matches the provided id(s) dtmi:example:Ward;114191638. Check that the Model ID provided is valid by doing a Model_List API call.\"}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:53 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "POST",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models?api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "29b0e8e6-2552-47b6-9faf-9fca3bb21173",
+      "Content-Type" : "application/json"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "215",
+      "StatusCode" : "201",
+      "Body" : "[{\"id\":\"dtmi:example:Ward;114191638\",\"description\":{\"en\":\"Aseparatepartitioninabuilding,madeofroomsandhallways.\"},\"displayName\":{\"en\":\"Ward\"},\"decommissioned\":false,\"uploadTime\":\"2020-09-03T22:50:54.5864199+00:00\"}]",
+      "Date" : "Thu, 03 Sep 2020 22:50:53 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  }, {
+    "Method" : "POST",
+    "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models?api-version=2020-05-31-preview",
+    "Headers" : {
+      "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
+      "x-ms-client-request-id" : "195663fd-f604-4a1d-8b43-963efedab737",
+      "Content-Type" : "application/json"
+    },
+    "Response" : {
+      "Strict-Transport-Security" : "max-age=2592000",
+      "retry-after" : "0",
+      "Content-Length" : "224",
+      "StatusCode" : "409",
+      "Body" : "{\"error\":{\"code\":\"ModelAlreadyExists\",\"message\":\"Model with same ID already exists dtmi:example:Ward;114191638. Use Model_List API to view models that already exist. See the Swagger example.(http://aka.ms/ModelListSwSmpl)\"}}",
+      "Date" : "Thu, 03 Sep 2020 22:50:55 GMT",
+      "Content-Type" : "application/json; charset=utf-8"
+    },
+    "Exception" : null
+  } ],
+  "variables" : [ ]
+}
