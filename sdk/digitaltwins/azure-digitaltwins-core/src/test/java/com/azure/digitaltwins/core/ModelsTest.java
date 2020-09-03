@@ -2,7 +2,6 @@ package com.azure.digitaltwins.core;
 
 import com.azure.core.http.HttpClient;
 import com.azure.core.http.rest.PagedIterable;
-import com.azure.core.util.Context;
 import com.azure.digitaltwins.core.models.ModelData;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -32,7 +31,7 @@ public class ModelsTest extends ModelsTestBase {
         // Create some models to test the lifecycle of
         final List<ModelData> createdModels = new ArrayList<>();
         createModelsRunner(client, (modelsList) -> {
-            PagedIterable<ModelData> createdModelsPagedIterable = client.createModels(modelsList, Context.NONE);
+            PagedIterable<ModelData> createdModelsPagedIterable = client.createModels(modelsList);
             AtomicInteger modelIndex = new AtomicInteger();
             createdModelsPagedIterable.forEach((modelData) -> {
                 // When creating models, the service will not return the model itself, so it will be manually
@@ -93,13 +92,13 @@ public class ModelsTest extends ModelsTestBase {
         final String wardModelPayload = TestAssetsHelper.getWardModelPayload(wardModelId);
         modelsToCreate.add(wardModelPayload);
 
-        PagedIterable<ModelData> createdModels = client.createModels(modelsToCreate, Context.NONE);
+        PagedIterable<ModelData> createdModels = client.createModels(modelsToCreate);
         createdModels.forEach((modelData) -> {
             assertNotNull(modelData);
         });
 
         assertRestException(
-            () -> client.createModels(modelsToCreate, Context.NONE).forEach((modelData) -> {
+            () -> client.createModels(modelsToCreate).forEach((modelData) -> {
             // Don't need to do anything here. Only calling .forEach to force the client to attempt to return the first
             // created model. That should trigger the call to throw a conflict exception
             }),
