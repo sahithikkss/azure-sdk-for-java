@@ -3,6 +3,7 @@ package com.azure.digitaltwins.core;
 import com.azure.core.http.HttpClient;
 import com.azure.digitaltwins.core.models.ModelData;
 import org.junit.jupiter.api.Test;
+import org.opentest4j.AssertionFailedError;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -53,11 +54,17 @@ public abstract class ModelsTestBase extends DigitalTwinsTestBase {
         deleteModelRunner.accept(modelId);
     }
 
-    static void assertModelDataAreEqual(ModelData expected, ModelData actual)
+    static void assertModelDataAreEqual(ModelData expected, ModelData actual, boolean compareModel)
     {
         assertEquals(expected.getId(), actual.getId());
         assertEquals(expected.getUploadTime(), actual.getUploadTime());
-        assertEquals(expected.getModel(), actual.getModel());
+
+        // ModelData objects that are obtained through the createModels API do not populate the model field, so it isn't
+        // worth comparing those ModelData objects with ModelData objects retrieved through getModel calls
+        if (compareModel)
+        {
+            assertEquals(expected.getModel(), actual.getModel());
+        }
 
         assertEquals(expected.getDescription().size(), actual.getDescription().size());
         for (String key : expected.getDescription().keySet()) {

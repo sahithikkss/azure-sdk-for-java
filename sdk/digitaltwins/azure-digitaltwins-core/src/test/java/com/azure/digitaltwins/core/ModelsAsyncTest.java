@@ -30,17 +30,12 @@ public class ModelsAsyncTest extends ModelsTestBase {
         createModelsRunner(asyncClient, (modelsList) -> {
             StepVerifier.create(asyncClient.createModels(modelsList))
                 .assertNext(createdModel -> {
-                    // When creating models, the service will not return the model itself, so it will be manually
-                    // assigned here and below to make comparisons easier
-                    createdModel.setModel(modelsList.get(0));
                     createdModels.add(createdModel);
                 })
                 .assertNext(createdModel -> {
-                    createdModel.setModel(modelsList.get(1));
                     createdModels.add(createdModel);
                 })
                 .assertNext(createdModel -> {
-                    createdModel.setModel(modelsList.get(2));
                     createdModels.add(createdModel);
                 })
                 .verifyComplete();
@@ -53,7 +48,7 @@ public class ModelsAsyncTest extends ModelsTestBase {
             getModelRunner(expected.getId(), (modelId) -> {
                 StepVerifier.create(asyncClient.getModelWithResponse(modelId))
                     .assertNext(retrievedModel -> {
-                        assertModelDataAreEqual(expected, retrievedModel.getValue());
+                        assertModelDataAreEqual(expected, retrievedModel.getValue(), false);
                     })
                     .verifyComplete();
             });

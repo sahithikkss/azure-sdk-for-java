@@ -32,13 +32,7 @@ public class ModelsTest extends ModelsTestBase {
         final List<ModelData> createdModels = new ArrayList<>();
         createModelsRunner(client, (modelsList) -> {
             PagedIterable<ModelData> createdModelsPagedIterable = client.createModels(modelsList);
-            AtomicInteger modelIndex = new AtomicInteger();
             createdModelsPagedIterable.forEach((modelData) -> {
-                // When creating models, the service will not return the model itself, so it will be manually
-                // assigned here and below to make comparisons easier
-                modelData.setModel(modelsList.get(modelIndex.get()));
-                modelIndex.getAndIncrement();
-
                 createdModels.add(modelData);
             });
         });
@@ -49,7 +43,7 @@ public class ModelsTest extends ModelsTestBase {
             // Get the model
             getModelRunner(expected.getId(), (modelId) -> {
                 ModelData actual = client.getModel(modelId);
-                assertModelDataAreEqual(expected, actual);
+                assertModelDataAreEqual(expected, actual, false);
             });
 
             // Decommission the model
