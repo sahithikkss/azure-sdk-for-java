@@ -13,8 +13,8 @@ import java.util.Scanner;
 import java.util.function.Consumer;
 
 public class TestAssetsHelper {
-    protected static int MAX_TRIES = 10;
-    protected static int MAX_ID_LENGTH = 27;
+    private static final int MAX_TRIES = 10;
+    private static final int MAX_ID_LENGTH = 27;
 
     // Remove all new line characters as they are different in different Operaing Systems.
     // This will ensure that the recorded files always match the request in playback mode of tests.

@@ -1,7 +1,10 @@
 package com.azure.digitaltwins.core;
 
 import com.azure.core.http.HttpClient;
+import com.azure.core.http.policy.HttpLogDetailLevel;
+import com.azure.core.http.policy.HttpLogOptions;
 import com.azure.core.http.rest.PagedIterable;
+import com.azure.core.util.logging.ClientLogger;
 import com.azure.digitaltwins.core.models.ModelData;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.MethodSource;
@@ -21,6 +24,8 @@ import static org.junit.jupiter.api.Assertions.assertTrue;
  * Sync client implementation of the model tests defined in {@link ModelsTestBase}
  */
 public class ModelsTest extends ModelsTestBase {
+
+    private final ClientLogger logger = new ClientLogger(ModelsTestBase.class);
 
     @ParameterizedTest(name = DISPLAY_NAME_WITH_ARGUMENTS)
     @MethodSource("com.azure.digitaltwins.core.TestHelper#getTestParameters")
@@ -120,6 +125,10 @@ public class ModelsTest extends ModelsTestBase {
     }
 
     private DigitalTwinsClient getClient(HttpClient httpClient, DigitalTwinsServiceVersion serviceVersion) {
-        return getDigitalTwinsClientBuilder().serviceVersion(serviceVersion).httpClient(httpClient).buildClient();
+        return getDigitalTwinsClientBuilder()
+            .serviceVersion(serviceVersion)
+            .httpClient(httpClient)
+            .httpLogOptions(new HttpLogOptions().setLogLevel(HttpLogDetailLevel.BODY_AND_HEADERS))
+            .buildClient();
     }
 }
