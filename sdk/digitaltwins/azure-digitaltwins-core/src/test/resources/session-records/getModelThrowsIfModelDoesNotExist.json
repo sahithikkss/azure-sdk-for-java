@@ -4,7 +4,7 @@
     "Uri" : "https://REDACTED.api.wus2.digitaltwins.azure.net/models/urn:doesnotexist:fakemodel:1000?includeModelDefinition=true&api-version=2020-05-31-preview",
     "Headers" : {
       "User-Agent" : "azsdk-java-${project.artifactId}/${project.version} (1.8.0_201; Windows 10; 10.0)",
-      "x-ms-client-request-id" : "ab2438f7-1bc4-4fee-8094-3e4df1ee8654"
+      "x-ms-client-request-id" : "746b1546-bde3-42eb-849b-826c8b362435"
     },
     "Response" : {
       "Strict-Transport-Security" : "max-age=2592000",
@@ -12,7 +12,7 @@
       "Content-Length" : "216",
       "StatusCode" : "404",
       "Body" : "{\"error\":{\"code\":\"ModelNotFound\",\"message\":\"There is no Model(s) available that matches the provided id(s) urn:doesnotexist:fakemodel:1000. Check that the Model ID provided is valid by doing a Model_List API call.\"}}",
-      "Date" : "Thu, 03 Sep 2020 23:31:31 GMT",
+      "Date" : "Thu, 03 Sep 2020 23:42:53 GMT",
       "Content-Type" : "application/json; charset=utf-8"
     },
     "Exception" : null
