@@ -19,13 +19,11 @@ import static org.junit.jupiter.api.Assertions.*;
  * Async client implementation of the model tests defined in {@link ModelsTestBase}
  */
 public class ModelsAsyncTest extends ModelsTestBase {
-    private DigitalTwinsAsyncClient asyncClient;
-
     @ParameterizedTest(name = DISPLAY_NAME_WITH_ARGUMENTS)
     @MethodSource("com.azure.digitaltwins.core.TestHelper#getTestParameters")
     @Override
     public void modelLifecycleTest(HttpClient httpClient, DigitalTwinsServiceVersion serviceVersion) {
-        asyncClient = getAsyncClient(httpClient, serviceVersion);
+        DigitalTwinsAsyncClient asyncClient = getAsyncClient(httpClient, serviceVersion);
 
         // Create some models to test the lifecycle of
         List<ModelData> createdModels = new ArrayList<>();
@@ -49,15 +47,13 @@ public class ModelsAsyncTest extends ModelsTestBase {
         });
 
         for (int modelIndex = 0; modelIndex < createdModels.size(); modelIndex++) {
-            // indices used in lambda expressions must be declared final, hence this duplicate
-            int finalModelIndex = modelIndex;
             final ModelData expected = createdModels.get(modelIndex);
 
             // Get the model
             getModelRunner(expected.getId(), (modelId) -> {
                 StepVerifier.create(asyncClient.getModelWithResponse(modelId))
                     .assertNext(retrievedModel -> {
-                        assertModelDataAreEqual(createdModels.get(finalModelIndex), retrievedModel.getValue());
+                        assertModelDataAreEqual(expected, retrievedModel.getValue());
                     })
                     .verifyComplete();
             });
@@ -135,8 +131,7 @@ public class ModelsAsyncTest extends ModelsTestBase {
         createModelsRunner(buildingModelId, floorModelId, hvacModelId, wardModelId, createModelsTestRunner);
     }
 
-    private DigitalTwinsAsyncClient getAsyncClient(HttpClient httpClient, DigitalTwinsServiceVersion serviceVersion)
-    {
+    private DigitalTwinsAsyncClient getAsyncClient(HttpClient httpClient, DigitalTwinsServiceVersion serviceVersion) {
         return getDigitalTwinsClientBuilder().serviceVersion(serviceVersion).httpClient(httpClient).buildAsyncClient();
     }
 }

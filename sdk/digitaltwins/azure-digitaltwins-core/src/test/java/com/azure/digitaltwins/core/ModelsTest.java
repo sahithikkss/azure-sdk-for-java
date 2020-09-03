@@ -99,8 +99,8 @@ public class ModelsTest extends ModelsTestBase {
 
         assertRestException(
             () -> client.createModels(modelsToCreate).forEach((modelData) -> {
-            // Don't need to do anything here. Only calling .forEach to force the client to attempt to return the first
-            // created model. That should trigger the call to throw a conflict exception
+                // Don't need to do anything here. Only calling .forEach to force the client to attempt to return the first
+                // created model. That should trigger the call to throw a conflict exception
             }),
             HttpURLConnection.HTTP_CONFLICT);
     }
@@ -125,8 +125,7 @@ public class ModelsTest extends ModelsTestBase {
         createModelsRunner(buildingModelId, floorModelId, hvacModelId, wardModelId, createModelsTestRunner);
     }
 
-    private DigitalTwinsClient getClient(HttpClient httpClient, DigitalTwinsServiceVersion serviceVersion)
-    {
+    private DigitalTwinsClient getClient(HttpClient httpClient, DigitalTwinsServiceVersion serviceVersion) {
         return getDigitalTwinsClientBuilder().serviceVersion(serviceVersion).httpClient(httpClient).buildClient();
     }
 }
