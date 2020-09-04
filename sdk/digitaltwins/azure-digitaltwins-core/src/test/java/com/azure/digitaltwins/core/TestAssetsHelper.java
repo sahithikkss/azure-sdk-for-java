@@ -177,6 +177,7 @@ public class TestAssetsHelper {
     {
         String id;
         Random random = new Random();
+        ErrorResponseException lastErrorResponseException = null;
         for (int i = 0; i < MAX_TRIES; ++i) {
             id = baseName + Math.abs(random.nextInt());
             id = id.length() > MAX_ID_LENGTH ? id.substring(0, MAX_ID_LENGTH) : id;
@@ -184,12 +185,13 @@ public class TestAssetsHelper {
                 getMethod.accept(id);
             }
             catch (ErrorResponseException e) {
+                lastErrorResponseException = e;
                 if (e.getResponse().getStatusCode() == HttpURLConnection.HTTP_NOT_FOUND) {
                     return id;
                 }
             }
         }
 
-        throw new AssertionFailedError("Unique Id could not be found with base " + baseName);
+        throw new AssertionFailedError("Unique Id could not be found with base " + baseName, lastErrorResponseException);
     }
 }
